@@ -23,14 +23,13 @@ int menuPrincipal()
                     "||                                                                 ||\n"
                     "|| 4. Listar                                                       ||\n"
                     "||                                                                 ||\n"
-                    //"5. Baja director\n"
-                    //"6. Mostrar\n"
-                    "|| 5. Salir                                                        ||\n"
+                    "|| 5. Informes                                                     ||\n"
                     "||                                                                 ||\n"
+                    "|| 6. Salir                                                        ||\n"
                     "=====================================================================\n"
                     "Ingrese una opcion: ");
 
-    while((opcion < 0 && opcion != 777 && opcion != 6) || (opcion > 5  && opcion != 777 && opcion != 6))
+    while((opcion < 0 && opcion != 777) || (opcion > 6  && opcion != 777))
     {
         printf("Ingrese una opcion valida\n");
         system("pause");
@@ -45,10 +44,9 @@ int menuPrincipal()
                         "||                                                                 ||\n"
                         "|| 4. Listar                                                       ||\n"
                         "||                                                                 ||\n"
-                        //"|| 5. Baja director\n"
-                        //"6. Mostrar\n"
-                        "|| 5. Salir                                                        ||\n"
+                        "|| 5. Informes                                                     ||\n"
                         "||                                                                 ||\n"
+                        "|| 6. Salir                                                        ||\n"
                         "=====================================================================\n"
                         "Ingrese una opcion: ");
     }
@@ -154,4 +152,28 @@ int subMenuModificarActor()
                         "Ingrese una opcion: ");
     }
     return opcion;
+}
+
+int subMenuInformes()
+{
+    int opcion;
+    opcion = getInt(" 1. Todas las peliculas con genero y actor\n"
+                    " 2. Peliculas cuya nacionalidad del actor sea EEUU\n"
+                    " 3. Por cada genero, el titulo de las peliculas que pertenecen a ese genero\n"
+                    " 4. Por cada genero, cantidad de peliculas\n"
+                    " 5. El/los generos con menos peliculas\n"
+                    "Ingrese una opcion: ");
+
+    while(opcion < 0 || opcion > 5)
+    {
+        opcion = getInt("Por favor, ingrese una opcion valida\n"
+                        " 1. Todas las peliculas con genero y actor\n"
+                        " 2. Peliculas cuya nacionalidad del actor sea EEUU\n"
+                        " 3. Por cada genero, el titulo de las peliculas que pertenecen a ese genero\n"
+                        " 4. Por cada genero, cantidad de peliculas\n"
+                        " 5. El/los generos con menos peliculas\n"
+                        "Ingrese una opcion: ");
+    }
+    return opcion;
+
 }

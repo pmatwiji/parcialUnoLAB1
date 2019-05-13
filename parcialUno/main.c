@@ -24,6 +24,28 @@ int main()
     inicializarEstadoActores(arrayActores, LIMITE);
     inicializarEstadoGeneros(arrayGeneros, LIMITE);
 
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1000, 2, "Avengers EndGame", 1, 20, 4, 2019, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1001, 5, "Thor", 1, 10, 6, 2013, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1002, 4, "Cellular", 1, 2, 5, 2004, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1003, 5, "Men in Black 4", 1, 10, 7, 2019, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1004, 2, "Iron Man", 1, 5, 9, 2012, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1005, 3, "13 going on 30", 4, 7, 5, 2004, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1006, 1, "Lucy", 1, 9, 2,	2014, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1007, 9, "Nace una estrella", 4, 8, 3, 2018, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1008, 4, "¿Dime con cuantos?", 4, 4, 4, 2010, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1009, 9, "Guardianes de la galaxia", 1, 20, 5, 2014, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1010, 7, "A perfect murder", 3, 6, 8, 1995, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1011, 1, "La isla", 3, 3, 10, 2005, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1012, 9, "¿Que paso ayer?", 2, 5, 2, 2013, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1013, 1, "Home Alone 3", 2, 6, 10, 1997, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1014, 10, "Deadpool", 1, 7, 12, 2015, 0 );
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1015, 2, "Sherlock Holmes", 1, 5, 6, 2011, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1016, 10, "Men in Black 3", 1, 2, 5, 2010, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1017, 10, "Avengers: Infinity War", 1, 6, 4, 2017, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1018, 7, "Grandes esperanzas", 4, 8, 12, 1995, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1019, 6, "SWAT", 1, 20, 2, 1998, 0);
+    hardcodePeliculas(arrayPeliculas, LIMITE, 1020, 6, "XxX", 1, 11, 5, 1992, 0);
+
     hardcodeGeneros(arrayGeneros, LIMITE, 1, "Accion", 0);
     hardcodeGeneros(arrayGeneros, LIMITE, 2, "Comedia", 0);
     hardcodeGeneros(arrayGeneros, LIMITE, 3, "Drama", 0);
@@ -86,7 +108,7 @@ int main()
                     if (flagUno == 0)
                     {
                         ordenarPeliculasPorFecha(arrayPeliculas, LIMITE);
-                        mostrarListaPeliculas(arrayPeliculas,LIMITE,arrayActores,LIMITE, arrayGeneros, LIMITE);
+                        mostrarTodasLasPeliculas(arrayPeliculas, LIMITE, arrayActores, LIMITE,arrayGeneros, LIMITE);
                         //mostrarTodasLasPeliculas(arrayPeliculas, LIMITE,arrayActores,LIMITE,arrayGeneros,LIMITE);
                     }
                     else
@@ -129,7 +151,7 @@ int main()
 //                case 1:
                 if (flagUno == 0)
                 {
-                    mostrarListaPeliculas(arrayPeliculas,LIMITE,arrayActores,LIMITE, arrayGeneros, LIMITE);
+                    mostrarTodasLasPeliculas(arrayPeliculas, LIMITE, arrayActores, LIMITE,arrayGeneros, LIMITE);
                     eliminarPelicula(arrayPeliculas, LIMITE,arrayActores, LIMITE,arrayGeneros, LIMITE);
                     system("pause");
                     system("cls");
@@ -170,7 +192,7 @@ int main()
 //                case 1:
                 if (flagUno == 0)
                 {
-                    mostrarListaPeliculas(arrayPeliculas,LIMITE,arrayActores,LIMITE, arrayGeneros, LIMITE);
+                    mostrarTodasLasPeliculas(arrayPeliculas, LIMITE, arrayActores, LIMITE,arrayGeneros, LIMITE);
                     modificarPelicula(arrayPeliculas, LIMITE, arrayActores, LIMITE,arrayGeneros, LIMITE);
                     do
                     {
@@ -233,47 +255,50 @@ int main()
             system("pause");
             system("cls");
             break;
-        case 5:
+        case 6:
             //printf("APROBAME PLS\n");
             system("pause");
             system("cls");
             break;
-        case 6:
-            peliculaMasNueva (arrayPeliculas, LIMITE);
-            peliculaMasVieja (arrayPeliculas, LIMITE);
-            peliculasEstrenadasEnDeterminadoMes(arrayPeliculas, LIMITE);
-            masPeliculasPorGenero(arrayPeliculas,LIMITE,arrayGeneros,LIMITE);
-            menosPeliculasPorGenero(arrayPeliculas,LIMITE,arrayGeneros,5);
-            system("pause");
-            system("cls");
-            break;
-        case 777:
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1000, 2, "Avengers EndGame", 1, 20, 4, 2019, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1001, 5, "Thor", 1, 10, 6, 2013, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1002, 4, "Cellular", 1, 2, 5, 2004, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1003, 5, "Men in Black 4", 1, 10, 7, 2019, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1004, 2, "Iron Man", 1, 5, 9, 2012, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1005, 3, "13 going on 30", 4, 7, 5, 2004, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1006, 1, "Lucy", 1, 9, 2,	2014, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1007, 9, "Nace una estrella", 4, 8, 3, 2018, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1008, 4, "¿Dime con cuantos?", 4, 4, 4, 2010, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1009, 9, "Guardianes de la galaxia", 1, 20, 5, 2014, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1010, 7, "A perfect murder", 3, 6, 8, 1995, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1011, 1, "La isla", 3, 3, 10, 2005, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1012, 9, "¿Que paso ayer?", 2, 5, 2, 2013, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1013, 1, "Home Alone 3", 2, 6, 10, 1997, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1014, 10, "Deadpool", 1, 7, 12, 2015, 0 );
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1015, 2, "Sherlock Holmes", 1, 5, 6, 2011, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1016, 10, "Men in Black 3", 1, 2, 5, 2010, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1017, 10, "Avengers: Infinity War", 1, 6, 4, 2017, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1018, 7, "Grandes esperanzas", 4, 8, 12, 1995, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1019, 6, "SWAT", 1, 20, 2, 1998, 0);
-            hardcodePeliculas(arrayPeliculas, LIMITE, 1020, 6, "XxX", 1, 11, 5, 1992, 0);
+        case 5:
+            flagUno = datoCargado(arrayPeliculas, LIMITE);
+            if (flagUno == 0)
+            {
+                opcion = subMenuInformes();
+                switch(opcion)
+                {
+                case 1:
+                    mostrarTodasLasPeliculas(arrayPeliculas, LIMITE, arrayActores, LIMITE,arrayGeneros, LIMITE);
+                    break;
+                case 2:
+                    peliculasConActorDeEEUU(arrayPeliculas, LIMITE, arrayActores, LIMITE);
+                    break;
+                case 3:
+                    peliculasPorGenero(arrayPeliculas,LIMITE,arrayGeneros,LIMITE);
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                }
+            }
 
+            else
+            {
+                printf("No hay datos cargados.\n");
+            }
+            system("pause");
             system("cls");
             break;
         }
     }
-    while(opcion != 5);
+    while(opcion != 6);
     return 0;
 }
+
+
+//1. todas las peliculas
+//2. peliculas cuya nacionalidad es eeuu
+//3. por cada genero el titulo de las pelis de ese genero
+//4. por cada genero cantidad de pelis
+//5. el genero con menos pelis

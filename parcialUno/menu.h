@@ -5,4 +5,4 @@ int subMenuAltas();
 int subMenuListar();
 int subMenuBaja();
 int subMenuModificar();
-
+int subMenuInformes();

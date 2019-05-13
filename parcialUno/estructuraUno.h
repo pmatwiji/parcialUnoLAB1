@@ -7,13 +7,6 @@
 #define ESTRUCTURAUNO_H_INCLUDED
 #include "estructuraDos.h"
 
-//typedef struct
-//{
-//    int dia;
-//    int mes;
-//    int anio;
-//}sFecha;
-
 typedef struct
 {
     int id;

@@ -186,8 +186,6 @@ int agregarPelicula(sPeliculas* arrayPeliculas, int capacidad, sActores* arrayAc
             arrayPeliculas[index].datoOcupado = OCUPADO;
 
             retorno = 0;
-            printf("ESTE ES EL ID %d",arrayPeliculas[index].id );
-            system("pause");
             printf("Datos cargados correctamente.\n");
             system("pause");
             system("cls");
@@ -241,7 +239,7 @@ void mostrarPelicula(sPeliculas* listaPeliculas, int lugar, int cantidadPelicula
                     strcpy(relacionGenero, listaGeneros[k].genero);
                 }
             }
-            printf(" %4d | %25s | %10s  | %25s |           %2d/%2d/%4d                     \n\n",listaPeliculas[lugar].id, listaPeliculas[lugar].titulo, relacionGenero, relacionActor,/* listaPeliculas[lugar].genero,listaPeliculas[lugar].actor,*/ listaPeliculas[lugar].dia, listaPeliculas[lugar].mes, listaPeliculas[lugar].anio);
+            printf(" %4d | %10s | %10s  | %10s |  %2d/%2d/%4d  \n\n",listaPeliculas[lugar].id, listaPeliculas[lugar].titulo, relacionGenero, relacionActor,/* listaPeliculas[lugar].genero,listaPeliculas[lugar].actor,*/ listaPeliculas[lugar].dia, listaPeliculas[lugar].mes, listaPeliculas[lugar].anio);
         }
 
 }
@@ -281,6 +279,9 @@ void mostrarUnaPelicula(sPeliculas* listaPeliculas, int indice, sActores* listaA
 void mostrarTodasLasPeliculas(sPeliculas* listaPeliculas, int cantidadPeliculas, sActores* listaActores, int cantidadActores, sGeneros* listaGeneros, int cantidadGeneros)
 {
     int i;
+    printf("=====================================================================================================\n"
+           "||                                          Listado:                                               ||\n"
+           "=====================================================================================================\n");
     if (listaPeliculas != NULL)
     {
         for(i=0;i<cantidadPeliculas;i++)
@@ -291,6 +292,7 @@ void mostrarTodasLasPeliculas(sPeliculas* listaPeliculas, int cantidadPeliculas,
             }
         }
     }
+    printf("=====================================================================================================\n");
 }
 
 
