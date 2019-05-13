@@ -234,7 +234,7 @@
 	"hardcode.h"
 	"validaciones.h"
 
-1557706427 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurauno.c
+1557709436 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurauno.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -281,7 +281,7 @@
 	"hardcode.h"
 	"validaciones.h"
 
-1557706321 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\main.c
+1557720852 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -335,7 +335,7 @@
 	"hardcode.h"
 	"validaciones.h"
 
-1557698961 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.c
+1557720711 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -349,5 +349,5 @@
 	"validaciones.h"
 	"informes.h"
 
-1557696537 c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.h
+1557709926 c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.h
 

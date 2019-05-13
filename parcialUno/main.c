@@ -243,6 +243,7 @@ int main()
             peliculaMasVieja (arrayPeliculas, LIMITE);
             peliculasEstrenadasEnDeterminadoMes(arrayPeliculas, LIMITE);
             masPeliculasPorGenero(arrayPeliculas,LIMITE,arrayGeneros,LIMITE);
+            menosPeliculasPorGenero(arrayPeliculas,LIMITE,arrayGeneros,5);
             system("pause");
             system("cls");
             break;

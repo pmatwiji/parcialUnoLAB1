@@ -26,7 +26,7 @@ void peliculaMasNueva (sPeliculas* arrayPeliculas, int cantidadPeliculas)
         }
 
     }
-    for(j=0;j<cantidadPeliculas;j++)
+    for(j=0; j<cantidadPeliculas; j++)
     {
         if(arrayPeliculas[j].anio == masNueva)
         {
@@ -50,7 +50,7 @@ void peliculaMasVieja (sPeliculas* arrayPeliculas, int cantidadPeliculas)
         }
 
     }
-    for(j=0;j<cantidadPeliculas;j++)
+    for(j=0; j<cantidadPeliculas; j++)
     {
         if(arrayPeliculas[j].anio == masVieja)
         {
@@ -68,7 +68,7 @@ void peliculasEstrenadasEnDeterminadoMes (sPeliculas* arrayPeliculas, int cantid
 
     printf("Las peliculas estrenadas en este mes son: \n");
 
-    for(i=0;i<cantidadPeliculas;i++)
+    for(i=0; i<cantidadPeliculas; i++)
     {
         if(arrayPeliculas[i].mes == mes  && arrayPeliculas[i].datoOcupado == OCUPADO)
         {
@@ -91,10 +91,10 @@ void masPeliculasPorGenero (sPeliculas* arrayPeliculas, int cantidadPeliculas, s
     int acumuladorGenero;
     char relacionGenero[24];
 
-    for(i=0;i<cantidadPeliculas;i++)
+    for(i=0; i<cantidadPeliculas; i++)
     {
         acumuladorGenero = 0;
-        for(j=0;j<cantidadGeneros;j++)
+        for(j=0; j<cantidadGeneros; j++)
         {
             if(arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
             {
@@ -108,10 +108,10 @@ void masPeliculasPorGenero (sPeliculas* arrayPeliculas, int cantidadPeliculas, s
         }
     }
 
-    for(i=0;i<cantidadPeliculas;i++)
+    for(i=0; i<cantidadPeliculas; i++)
     {
         acumuladorGenero = 0;
-        for(j=0;j<cantidadGeneros;j++)
+        for(j=0; j<cantidadGeneros; j++)
         {
             if(arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
             {
@@ -131,5 +131,47 @@ void masPeliculasPorGenero (sPeliculas* arrayPeliculas, int cantidadPeliculas, s
     printf("El genero con mas peliculas es %s.\n", relacionGenero);
 
 
+}
+
+void menosPeliculasPorGenero (sPeliculas* arrayPeliculas, int cantidadPeliculas, sGeneros* arrayGeneros, int cantidadGeneros)
+{
+    int i;
+    int j;
+    int acumuladorGeneroMinimo = LIMITE;
+    int acumuladorGenero;
+    char relacionGeneroMenor[24];
+
+    for(i=0; i<cantidadPeliculas; i++)
+    {
+        acumuladorGenero = 0;
+        for(j=0; j<cantidadGeneros; j++)
+        {
+            if(arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
+            {
+                acumuladorGenero++;
+            }
+        }
+        if(acumuladorGenero<=acumuladorGeneroMinimo)
+        {
+            acumuladorGeneroMinimo = acumuladorGenero;
+        }
+    }
+    for(i=0; i<cantidadPeliculas; i++)
+    {
+        acumuladorGenero = 0;
+        for(j=0; j<cantidadGeneros; j++)
+        {
+            if(arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
+            {
+                acumuladorGenero++;
+            }
+        }
+
+        if(acumuladorGenero == acumuladorGeneroMinimo && arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
+        {
+                strcpy(relacionGeneroMenor,arrayGeneros[j].genero);
+        }
+    }
+    printf("El genero con menos peliculas tiene %d peliculas y es %s \n", acumuladorGeneroMinimo,relacionGeneroMenor);
 }
 

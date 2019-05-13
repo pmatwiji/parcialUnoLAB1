@@ -149,7 +149,7 @@ int agregarPelicula(sPeliculas* arrayPeliculas, int capacidad, sActores* arrayAc
         if(index != -1)
         {
             /*----------------ID---------------------------*/
-            arrayPeliculas[index].id=index+1021;
+            arrayPeliculas[index].id=index+1000;
             /*---------------TITULO------------------------*/
             getString("Ingrese el titulo de la pelicula: ", buffer);
             while(strlen(buffer)>51)
