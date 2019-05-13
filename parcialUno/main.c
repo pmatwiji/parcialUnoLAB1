@@ -279,6 +279,7 @@ int main()
                 case 4:
                     break;
                 case 5:
+                    menosPeliculasPorGenero ( arrayPeliculas, LIMITE, arrayGeneros, LIMITE);
                     break;
                 }
             }

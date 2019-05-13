@@ -139,6 +139,7 @@ void menosPeliculasPorGenero (sPeliculas* arrayPeliculas, int cantidadPeliculas,
     int j;
     int acumuladorGeneroMinimo = LIMITE;
     int acumuladorGenero;
+    char generoMinimo[24];
     char relacionGeneroMenor[24];
 
     for(i=0; i<cantidadPeliculas; i++)
@@ -151,28 +152,21 @@ void menosPeliculasPorGenero (sPeliculas* arrayPeliculas, int cantidadPeliculas,
                 acumuladorGenero++;
             }
         }
-        if(acumuladorGenero<=acumuladorGeneroMinimo)
+        if(acumuladorGenero<acumuladorGeneroMinimo)
         {
             acumuladorGeneroMinimo = acumuladorGenero;
+            printf("%s\n",arrayGeneros[j].genero);
+            system("pause");
+            strcpy(generoMinimo,arrayGeneros[j].genero);
+            printf("%s\n",generoMinimo);
+            system("pause");
         }
     }
-    for(i=0; i<cantidadPeliculas; i++)
+    if(acumuladorGenero == acumuladorGeneroMinimo && arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
     {
-        acumuladorGenero = 0;
-        for(j=0; j<cantidadGeneros; j++)
-        {
-            if(arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
-            {
-                acumuladorGenero++;
-            }
-        }
-
-        if(acumuladorGenero == acumuladorGeneroMinimo && arrayPeliculas[i].genero == arrayGeneros[j].id && arrayPeliculas[i].datoOcupado == OCUPADO && arrayGeneros[j].datoOcupado == OCUPADO)
-        {
-            strcpy(relacionGeneroMenor,arrayGeneros[j].genero);
-        }
+        strcpy(relacionGeneroMenor,arrayGeneros[j].genero);
     }
-    printf("El genero con menos peliculas tiene %d peliculas y es %s \n", acumuladorGeneroMinimo,relacionGeneroMenor);
+    printf("El genero con menos peliculas tiene %d peliculas y es %s \n", acumuladorGeneroMinimo,generoMinimo);
 }
 
 
@@ -186,14 +180,9 @@ void peliculasConActorDeEEUU (sPeliculas* arrayPeliculas, int cantidadPeliculas,
     {
         for(j=0; j<cantidadActores; j++)
         {
-            if(arrayPeliculas[i].actor == arrayActores[j].id && arrayPeliculas[i].datoOcupado == 0 && arrayActores[j].datoOcupado == 0)
+            if(arrayPeliculas[i].actor == arrayActores[j].id && arrayPeliculas[i].datoOcupado == 0 && arrayActores[j].datoOcupado == 0 && strcmp(arrayActores[j].nacionalidad, estadosUnidos)==0)
             {
-
-                if(arrayActores[j].nacionalidad == estadosUnidos);
-                {
-                    printf(" %10s | %10s | %10s \n", arrayPeliculas[i].titulo, arrayActores[j].nombre, arrayActores[j].nacionalidad);
-                }
-
+                printf(" %25s | %25s | %10s \n", arrayPeliculas[i].titulo, arrayActores[j].nombre, arrayActores[j].nacionalidad);
             }
         }
     }
@@ -204,69 +193,20 @@ void peliculasPorGenero (sPeliculas* arrayPeliculas, int cantidadPeliculas, sGen
     int i;
     int j;
 
-    printf("Peliculas de accion: \n");
-    for(i=0; i<cantidadPeliculas; i++)
+    for(i=0; i<cantidadGeneros; i++)
     {
-        for(j=0; j<cantidadGeneros; j++)
+        if(arrayGeneros[i].datoOcupado == OCUPADO)
         {
-            if(arrayPeliculas[i].genero == 1 && arrayPeliculas[i].datoOcupado == 0 && arrayGeneros[j].datoOcupado == 0)
+            printf("\nGenero: %s\nPeliculas:\n",arrayGeneros[i].genero);
+            for(j=0; j<cantidadPeliculas; j++)
             {
-                printf(" %s\n", arrayPeliculas[i].titulo);
-                break;
+                if(arrayPeliculas[j].genero == arrayGeneros[i].id && arrayPeliculas[j].datoOcupado == 0)
+                {
+                    printf("%25s\n",arrayPeliculas[j].titulo);
+                }
             }
+            printf("\n=================================================\n");
         }
+
     }
-    printf("=================================================\n");
-    printf("Peliculas de comedia: \n");
-    for(i=0; i<cantidadPeliculas; i++)
-    {
-        for(j=0; j<cantidadGeneros; j++)
-        {
-            if(arrayPeliculas[i].genero == 2 && arrayPeliculas[i].datoOcupado == 0 && arrayGeneros[j].datoOcupado == 0)
-            {
-                printf(" %s\n", arrayPeliculas[i].titulo);
-                break;
-            }
-        }
-    }
-    printf("=================================================\n");
-    printf("Peliculas de drama: \n");
-    for(i=0; i<cantidadPeliculas; i++)
-    {
-        for(j=0; j<cantidadGeneros; j++)
-        {
-            if(arrayPeliculas[i].genero == 3 && arrayPeliculas[i].datoOcupado == 0 && arrayGeneros[j].datoOcupado == 0)
-            {
-                printf(" %s\n", arrayPeliculas[i].titulo);
-                break;
-            }
-        }
-    }
-    printf("=================================================\n");
-    printf("Peliculas de romance: \n");
-    for(i=0; i<cantidadPeliculas; i++)
-    {
-        for(j=0; j<cantidadGeneros; j++)
-        {
-            if(arrayPeliculas[i].genero == 4 && arrayPeliculas[i].datoOcupado == 0 && arrayGeneros[j].datoOcupado == 0)
-            {
-                printf(" %s\n", arrayPeliculas[i].titulo);
-                break;
-            }
-        }
-    }
-    printf("=================================================\n");
-    printf("Peliculas de terror: \n");
-    for(i=0; i<cantidadPeliculas; i++)
-    {
-        for(j=0; j<cantidadGeneros; j++)
-        {
-            if(arrayPeliculas[i].genero == 5 && arrayPeliculas[i].datoOcupado == 0 && arrayGeneros[j].datoOcupado == 0)
-            {
-                printf(" %s\n", arrayPeliculas[i].titulo);
-                break;
-            }
-        }
-    }
-    printf("=================================================\n");
 }

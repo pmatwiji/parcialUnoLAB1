@@ -234,7 +234,7 @@
 	"hardcode.h"
 	"validaciones.h"
 
-1557709436 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurauno.c
+1557783637 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurauno.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -247,20 +247,20 @@
 	"hardcode.h"
 	"validaciones.h"
 
-1557593105 c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurados.h
+1557757985 c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurados.h
 
-1557706722 c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurauno.h
+1557757985 c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurauno.h
 	"estructuraDos.h"
 
-1557243596 c:\users\peps\desktop\parcialunolab1-master\parcialuno\funcionesgenericas.h
+1557757985 c:\users\peps\desktop\parcialunolab1-master\parcialuno\funcionesgenericas.h
 
-1557243596 c:\users\peps\desktop\parcialunolab1-master\parcialuno\menu.h
+1557757985 c:\users\peps\desktop\parcialunolab1-master\parcialuno\menu.h
 
-1557428139 c:\users\peps\desktop\parcialunolab1-master\parcialuno\hardcode.h
+1557757985 c:\users\peps\desktop\parcialunolab1-master\parcialuno\hardcode.h
 
-1557243596 c:\users\peps\desktop\parcialunolab1-master\parcialuno\validaciones.h
+1557757985 c:\users\peps\desktop\parcialunolab1-master\parcialuno\validaciones.h
 
-1557243596 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\funcionesgenericas.c
+1557757985 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\funcionesgenericas.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -268,34 +268,7 @@
 	<ctype.h>
 	"validaciones.h"
 
-1557703839 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\hardcode.c
-	<stdio.h>
-	<stdlib.h>
-	<conio.h>
-	<string.h>
-	<ctype.h>
-	"estructuraUno.h"
-	"estructuraDos.h"
-	"funcionesGenericas.h"
-	"menu.h"
-	"hardcode.h"
-	"validaciones.h"
-
-1557720852 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\main.c
-	<stdio.h>
-	<stdlib.h>
-	<conio.h>
-	<string.h>
-	<ctype.h>
-	"estructuraUno.h"
-	"estructuraDos.h"
-	"funcionesGenericas.h"
-	"menu.h"
-	"hardcode.h"
-	"validaciones.h"
-	"informes.h"
-
-1557706329 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\menu.c
+1557757985 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\hardcode.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -308,34 +281,7 @@
 	"hardcode.h"
 	"validaciones.h"
 
-1557243596 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\validaciones.c
-	<stdio.h>
-	<stdlib.h>
-	<conio.h>
-	<string.h>
-	<ctype.h>
-	"estructuraUno.h"
-	"estructuraDos.h"
-	"funcionesGenericas.h"
-	"menu.h"
-	"hardcode.h"
-	"validaciones.h"
-	"validaciones.h"
-
-1557594458 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurados.c
-	<stdio.h>
-	<stdlib.h>
-	<conio.h>
-	<string.h>
-	<ctype.h>
-	"estructuraUno.h"
-	"estructuraDos.h"
-	"funcionesGenericas.h"
-	"menu.h"
-	"hardcode.h"
-	"validaciones.h"
-
-1557720711 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.c
+1557782617 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -349,7 +295,61 @@
 	"validaciones.h"
 	"informes.h"
 
-1557709926 c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.h
+1557757985 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+	"estructuraUno.h"
+	"estructuraDos.h"
+	"funcionesGenericas.h"
+	"menu.h"
+	"hardcode.h"
+	"validaciones.h"
+
+1557757985 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+	"estructuraUno.h"
+	"estructuraDos.h"
+	"funcionesGenericas.h"
+	"menu.h"
+	"hardcode.h"
+	"validaciones.h"
+	"validaciones.h"
+
+1557757985 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\estructurados.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+	"estructuraUno.h"
+	"estructuraDos.h"
+	"funcionesGenericas.h"
+	"menu.h"
+	"hardcode.h"
+	"validaciones.h"
+
+1557783280 source:c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+	"estructuraUno.h"
+	"estructuraDos.h"
+	"funcionesGenericas.h"
+	"menu.h"
+	"hardcode.h"
+	"validaciones.h"
+	"informes.h"
+
+1557757985 c:\users\peps\desktop\parcialunolab1-master\parcialuno\informes.h
 
 1557721181 source:d:\matwijiszyn\parcialunolab1-master\parcialuno\estructurados.c
 	<stdio.h>
